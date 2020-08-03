@@ -1,0 +1,27 @@
+<div class="jumbotron">
+  <h1 class="display-4">Bem-vindo ao WebAPI!</h1>
+  <p class="lead">API de Filmes.</p>
+  <hr>
+</div>
+
+<hr>
+
+<h2>Pesquisar Filme</h2>
+<div class="card">
+    <div class="card-body">
+        <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" class="form-control">
+        <a onclick="javascript:getUrl();"><button class="btn btn-success mt-4">Pesquisar</button></a>
+        <a onclick="javascript:getFullUrl();" ><button class="btn btn-primary mt-4">Pesquisar Todos</button></a>
+        <textarea class="mt-4" name="resultado" id="resultado" cols="149" rows="10"></textarea><br>
+    </div>
+</div>
+
+<script>
+    function getUrl(){
+        window.location.href = 'http://localhost:8080/search/' + document.getElementById('nome').value
+    }
+    function getFullUrl(){
+        window.location.href = 'http://localhost:8080/all'
+    }
+</script>
